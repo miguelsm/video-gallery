@@ -1,0 +1,141 @@
+html, body, body>.container {
+  height: 100%;
+  min-height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
+  text-align: center;
+  z-index: 1999;
+}
+
+.transparent { opacity: .5; }
+
+.vid-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 2em 0 1em 0;
+  background: #fff;
+  z-index: 1000;
+  width: 100%;
+}
+.vid-header [class^="col-"] { margin-bottom: .5em; }
+
+.vid-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 1em 0 2em 0;
+  background: #fff;
+  border-top: 1px solid #eee;
+  width: 100%;
+}
+.vid-footer button { margin-bottom: .5em; }
+
+header + .vid-list {
+  margin-top: 10em;
+  padding-bottom: 10em;
+}
+
+.vid-cat-separator {
+  margin-right: 10px;
+}
+
+.vid-item {
+  background: #fff;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  min-width: 285px;
+  min-height: 285px;
+}
+
+.vid-actions { margin-top: -20px; visibility: hidden; }
+.vid-item:hover .vid-actions { visibility: visible; }
+
+.vid-video {
+  position: relative;
+  padding: 1em 0;
+  cursor: pointer;
+}
+
+.vid-select {
+  color: #3a87ad;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+.vid-hidden .vid-video,
+.vid-hidden .vid-info { opacity: .3; }
+.vid-hidden .vid-info { text-decoration: line-through; }
+
+.vid-info { height: 40px; max-height: 40px; min-height: 40px; }
+
+.helper {
+  display: block;
+  background: red;
+  height: 100px;
+  width: 100px;
+}
+
+.thumb {
+  height: 100%;
+  width: 100%;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -32px;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  height: 40px;
+  width: 64px;    
+}
+
+.vid-video:hover .play-button {
+  background-color: rgb(255, 105, 180);
+  background-color: rgba(255, 105, 180, 0.9);
+}
+
+.play-button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10.5px;
+  left: 24px;
+  margin: 0 auto;
+  border-style: solid;
+  border-width: 9.5px 0 9.5px 17px;
+  border-color: transparent transparent transparent rgb(255, 255, 255);
+  border-color: transparent transparent transparent rgba(255, 255, 255, 1);
+}
+
+.edit-video-form { margin: 0; }
+
+.modal {
+  display: block;
+  overflow: hidden;
+}
+
+.decipher-tags {
+  border-radius: 4px;
+  margin: 0;
+  padding: 5px 12px;
+  min-height: 34px;
+}
+.input-group .decipher-tags {
+  border-radius: 0 4px 4px 0;
+}
+

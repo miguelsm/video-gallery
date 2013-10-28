@@ -1,0 +1,7 @@
+app/node_modules
+public/node_modules
+public/dist
+public/.tmp
+public/.sass-cache
+public/app/bower_components
+public/app/scripts/config.js

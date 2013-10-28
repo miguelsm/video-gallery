@@ -1,0 +1,7 @@
+{
+  "db": "mongodb://",
+  "allowOrigin": "http://localhost:9000",
+  "app": {
+    "name": "Video Gallery"
+  }
+}

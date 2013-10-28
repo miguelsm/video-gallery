@@ -1,0 +1,22 @@
+header.page-header.vid-header(ng-if="tags.length > 0")
+  .container
+    .row
+      .col-sm-12
+        ul.list-inline
+          li
+            h4
+              a(href='', ng-href='', ng-click='filter.tag = ""')
+                | All
+          li(ng-repeat='tag in tags')
+            h4
+              span.vid-cat-separator
+                | -
+              a(href='', ng-href='', ng-click='filter.tag = tag')
+                | {{ tag | capitalize }}
+.row.vid-list
+  ul.col-xs-12.list-unstyled
+    li.vid-item.col-lg-3.col-md-4.col-sm-6.col-xs-12(ng-repeat='video in videos | filter:filterFn')
+      .vid-video(video='video.youtubeId', play-button='"play-button"')
+      .row.vid-info
+        .col-xs-12
+          strong(ng-bind='video.title')

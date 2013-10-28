@@ -1,0 +1,25 @@
+.modal-dialog
+  .modal-content
+    .modal-header
+      h4.modal-title Video
+    form.form-horizontal.edit-video-form(name='editVideoForm', novalidate='novalidate')
+      .modal-body
+        .form-group
+          label.control-label.col-sm-4 Title:
+          .col-sm-8
+            input#title.form-control(type='text', ng-model='video.title')
+        .form-group
+          label.control-label.col-sm-4 Youtube URL:
+          .col-sm-8
+            input#url.form-control(type='text', ng-model='video.url')
+        .form-group
+          label.control-label.col-sm-4 Tags:
+          .col-sm-8
+            tags(options='{ addable: true }', src='b for b in tags', model='video.tags')
+        .form-group
+          label.control-label.col-sm-4 Information:
+          .col-sm-8
+            textarea#info.form-control(type='text', ng-model='video.info')
+      .modal-footer
+        button.btn.btn-primary(ng-click='ok()', ng-disabled='editVideoForm.$invalid') Ok
+        button.btn(ng-click='cancel()') Cancel

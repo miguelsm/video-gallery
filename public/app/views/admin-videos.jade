@@ -1,0 +1,62 @@
+header.page-header.vid-header
+  .container
+    .row
+      .col-sm-4
+        .input-group
+          span.input-group-addon
+            i.fa.fa-search
+          input.form-control(type='text', placeholder='Title', ng-model='filter.title')
+      .col-sm-8
+        .input-group
+          span.input-group-addon
+            i.fa.fa-tag
+          tags(src='b for b in tags', model='filter.tags')
+.row.vid-list
+  ul#vid-list.col-sm-12.list-unstyled(jq-ui-sortable='{ stop: sort }')
+    li.vid-item.col-lg-3.col-md-4.col-sm-6.col-xs-12(
+      ng-repeat='video in videos | filter:filterFn',
+      ng-click='select(video)',
+      ng-class='{ "vid-hidden": video.hidden, "vid-select": video.selected }',
+      data-id='{{ video._id }}')
+      .vid-video(video='video.youtubeId', disable-play='true')
+      .row.vid-info
+        .col-sm-12
+          strong(ng-bind='video.title')
+      .row.vid-actions
+        .col-sm-12.text-right
+          .vid-actions.btn-group
+            button.btn.btn-default.btn-sm(type='button',
+              ng-click='remove(video); $event.stopPropagation()')
+              i.fa.fa-trash-o
+            button.btn.btn-default.btn-sm(type='button',
+              ng-click='hide(video, !video.hidden); $event.stopPropagation()')
+              i.fa(ng-class='video.hidden && "fa-eye" || "fa-eye-slash"')
+            button.btn.btn-default.btn-sm(type='button',
+              ng-click='edit(video); $event.stopPropagation()')
+              i.fa.fa-edit
+.vid-footer
+  .container
+    .row
+      .col-sm-8.col-sm-offset-2.text-center
+        button.btn.btn-success(ng-click='add()')
+          i.fa.fa-plus
+          |  Add
+        button.btn.btn-danger(ng-click='removeSelected()', ng-disabled='selection.length === 0')
+          i.fa.fa-trash-o
+          |  Delete
+        button.btn.btn-default(ng-click='hideSelected(false)', ng-disabled='selection.length === 0')
+          i.fa.fa-eye
+          |  Show
+        button.btn.btn-default(ng-click='hideSelected(true)', ng-disabled='selection.length === 0')
+          i.fa.fa-eye-slash
+          |  Hide
+        button.btn.btn-default(ng-click='selectAll()', ng-disabled='videos.length === 0')
+          i.fa.fa-check-square-o
+          |  Check all
+        button.btn.btn-default(ng-click='deselectAll()', ng-disabled='selection.length === 0')
+          i.fa.fa-square-o
+          |  Uncheck all
+      .col-sm-2.text-right
+        button.btn.btn-primary(ng-click='preview()')
+          i.fa.fa-external-link
+          |  Preview

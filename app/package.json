@@ -1,0 +1,11 @@
+{
+  "name": "video-gallery",
+  "version": "0.0.0",
+  "dependencies": {
+    "express": "latest",
+    "mongoose": "latest",
+    "lodash": "latest",
+    "q": "~0.9.7"
+  },
+  "devDependencies": {}
+}
