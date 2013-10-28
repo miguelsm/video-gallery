@@ -23,11 +23,12 @@ workflow.
 * Add user accounts.
 
 ### Installation:
+
 ```
-$ app/npm install
 # npm install -g yo
-$ public/npm install
-$ public/bower install
+app/$ npm install
+public/$ npm install
+public/$ bower install
 ```
 
 ### Configuration:
