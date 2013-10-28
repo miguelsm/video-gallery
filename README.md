@@ -2,7 +2,7 @@
 
 (Work-in-progress) Web application for managing a video gallery/portfolio.
 
-** [Demo](http://video-gallery.miguelsm.webfactional.com/#/admin/videos) ** -
+__[Demo](http://video-gallery.miguelsm.webfactional.com/#/admin/videos)__ -
 Tested on Chrome and Firefox.
 
 The API is built on Node.js with [Express.js](http://expressjs.com) and uses
