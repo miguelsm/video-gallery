@@ -21,3 +21,23 @@ workflow.
 ### TODO:
 * Support more video hosting services.
 * Add user accounts.
+
+### Installation:
+```
+$ app/npm install
+# npm install -g yo
+$ public/npm install
+$ public/bower install
+```
+
+### Configuration:
+```
+$ vim app/config/env/development.json
+$ vim public/Gruntfile.js (edit ngconstant configuration)
+```
+
+### Running:
+```
+$ app/NODE_ENV=development PORT=3000 node app.js
+$ public/grunt server
+```
