@@ -2,7 +2,7 @@
 
 (Work-in-progress) Web application for managing a video gallery/portfolio.
 
-** [Demo](http://video-gallery.miguelsm.webfactional.com/#/admin/videos) ** -
+__[Demo](http://video-gallery.miguelsm.webfactional.com/#/admin/videos)__ -
 Tested on Chrome and Firefox.
 
 The API is built on Node.js with [Express.js](http://expressjs.com) and uses
@@ -21,3 +21,24 @@ workflow.
 ### TODO:
 * Support more video hosting services.
 * Add user accounts.
+
+### Installation:
+
+```
+# npm install -g yo
+app/$ npm install
+public/$ npm install
+public/$ bower install
+```
+
+### Configuration:
+```
+$ vim app/config/env/development.json
+$ vim public/Gruntfile.js (edit ngconstant configuration)
+```
+
+### Running:
+```
+$ app/NODE_ENV=development PORT=3000 node app.js
+$ public/grunt server
+```
