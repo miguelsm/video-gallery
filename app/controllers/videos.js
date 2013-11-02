@@ -87,8 +87,9 @@ exports.queryAdmin = function (req, res) {
  * List of videos inside a given category
  */
 exports.queryCategory = function (req, res) {
-  Video.find({ tags: { $all: [ req.params.tag ] }}).sort('order').exec(
-    function (err, videos) {
+  Video.find({ tags: { $all: [ req.params.tag ] }, hidden: false })
+    .sort('order')
+    .exec(function (err, videos) {
       if (err) {
         res.send(500);
         console.log(err);
