@@ -2,7 +2,7 @@
 
 (Work-in-progress) Web application for managing a video gallery/portfolio.
 
-__[Demo](http://video-gallery.miguelsm.webfactional.com/#/admin/videos)__ -
+__[Demo](http://video-gallery.herokuapp.com/#/admin/videos)__ -
 Tested on Chrome and Firefox.
 
 The API is built on Node.js with [Express.js](http://expressjs.com) and uses
@@ -41,4 +41,5 @@ $ vim public/Gruntfile.js (edit ngconstant configuration)
 ```
 $ app/NODE_ENV=development PORT=3000 node app.js
 $ public/grunt server
+$ xdg-open http://localhost:9000/#/admin/videos
 ```

@@ -181,7 +181,10 @@ module.exports = function (grunt) {
       }
     },
     usemin: {
-      html: ['<%= yeoman.dist %>/{,*/}*.html'],
+      html: ['<%= yeoman.dist %>/{,*/}*.html',
+             '<%= yeoman.dist %>/template/**/*.html',
+             '<%= yeoman.dist %>/templates/**/*.html',
+             '<%= yeoman.dist %>/views/**/*.html'],
       css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
       options: {
         dirs: ['<%= yeoman.dist %>']
@@ -255,8 +258,8 @@ module.exports = function (grunt) {
             'bower_components/**/*',
             'images/{,*/}*.{gif,webp}',
             'styles/fonts/*',
-            'template',
-            'templates'
+            'template/**/*',
+            'templates/**/*'
           ]
         }, {
           expand: true,
@@ -341,7 +344,7 @@ module.exports = function (grunt) {
         name: 'config',
         constants: {
           ENV: 'production',
-          API: 'http://localhost:3000'
+          API: 'http://video-gallery.herokuapp.com'
         }
       }]
     },
